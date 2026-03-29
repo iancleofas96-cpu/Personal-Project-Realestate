@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* CSS Reset - Only for critical layout conflicts */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Reset html and body */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'DM Sans', sans-serif;
+    background: #f0f2f5;
+    color: #1a1a2e;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Override Vite default body styles */
+body {
+    display: block !important;
+    place-items: unset !important;
+    min-width: unset !important;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Override root styles */
+:root {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    color-scheme: light;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Override media scheme preferences */
+@media (prefers-color-scheme: light) {
+    :root {
+        color: #1a1a2e;
+        background-color: #f0f2f5;
+    }
+}
+
+/* App layout - CRITICAL - Keep !important */
+#root {
+    display: flex !important;
+    min-height: 100vh !important;
+    background: #f0f2f5 !important;
+    width: 100% !important;
+}
+
+.app-layout {
+    display: flex !important;
+    min-height: 100vh !important;
+    background: #f0f2f5 !important;
+    width: 100% !important;
+}
+
+/* Main content - CRITICAL - Keep !important */
+.main-content {
+    flex: 1 !important;
+    margin-left: 260px !important;
+    width: calc(100% - 260px) !important;
+    min-width: 0 !important;
+    min-height: 100vh !important;
+    background: #f0f2f5 !important;
+    overflow-x: hidden !important;
+}
+
+/* Properties container - CRITICAL - Keep !important */
+.properties-container {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 24px 28px !important;
+    background: #f0f2f5 !important;
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+/* Basic resets - No !important */
+ol, ul { list-style: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+blockquote, q { quotes: none; }
+img, video { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+
+/* Mobile responsive - Keep !important */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+}
